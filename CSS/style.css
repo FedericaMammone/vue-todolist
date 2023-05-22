@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 20px auto;
+    width: 70%;
+    height: 100vh;
+}
+
+.new-task {
+    text-align: center;
+}
+
+.new-task input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    min-width: 300px;
+    margin-right: 10px;
+}
+
+.new-task button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.tasks-container {
+    margin: 40px;
+    border-radius: 10px;
+    background-color: #F5F7F7;
+    padding: 30px;
+}
+
+.task {
+    border-bottom: 1px solid #DADEE1;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.task i{
+    float: right;
+}
+
+.fatto {
+    text-decoration: line-through;
+}
