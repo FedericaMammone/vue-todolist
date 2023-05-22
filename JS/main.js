@@ -32,7 +32,12 @@ createApp({
             console.log(this.newTask);
 
             if(this.newTask !== '' && this.newTask.length >= 5){
-                this.tasks.unshift(this.newTask);
+                const oggettoTask = 
+                {
+                    text: this.newTask,
+                    done: false
+                }
+                this.tasks.unshift(oggettoTask);
                 this.error = false;
             }else {
                 this.error = true;
@@ -42,6 +47,13 @@ createApp({
         },
         rimuoviTask(indice){
             this.tasks.splice(indice, 1);
+        },
+        invertDone(index){
+            console.log(index);
+
+            if(this.tasks.done === true){
+                this.tasks.done = false;
+            }
         }
     }
 
