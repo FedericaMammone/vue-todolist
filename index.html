@@ -25,7 +25,8 @@
 
         <div class="tasks-container">
             <ul>
-                <li class="task" v-for="(task, index) in tasks">
+                <li class="task" v-for="(task, index) in tasks" 
+                :class="task.done === true ? 'fatto' : ''">
                     {{task.text}}
 
                     <i class="fa-solid fa-xmark" @click="rimuoviTask"></i>
