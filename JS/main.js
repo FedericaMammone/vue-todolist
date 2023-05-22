@@ -51,8 +51,11 @@ createApp({
         invertDone(index){
             console.log(index);
 
-            if(this.tasks.done === true){
-                this.tasks.done = false;
+            if(index.done === true){
+                index.done = false;
+            }else{
+                index.done = true;
+
             }
         }
     }
