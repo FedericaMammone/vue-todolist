@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <div id="app" class="container">
 
         <div class="new-task">
-            <input type="text" placeholder="Nuova task" v-model="newTask" 
-            @keyup.enter="aggiungiTask">
-            <button @click="aggiungiTask">Aggiungi</button>
+            <input type="text" placeholder="Nuova task" v-model="newTask" @keyup.enter="aggiungiTask">
+            <button @click.stop="aggiungiTask">Aggiungi</button>
 
             <!-- output errore in pagina -->
             <div class="error" v-if="error">
@@ -25,11 +28,11 @@
 
         <div class="tasks-container">
             <ul>
-                <li class="task" v-for="(task, index) in tasks" 
-                :class="task.done === true ? 'fatto' : ''" @click="invertDone(task)">
+                <li class="task" v-for="(task, index) in tasks" :class="task.done === true ? 'fatto' : ''"
+                    @click.stop="invertDone(task)">
                     {{task.text}}
 
-                    <i class="fa-solid fa-xmark" @click="rimuoviTask"></i>
+                    <i class="fa-solid fa-xmark" @click.stop="rimuoviTask(index)"></i>
                 </li>
             </ul>
         </div>
@@ -41,4 +44,5 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="JS/main.js"></script>
 </body>
+
 </html>

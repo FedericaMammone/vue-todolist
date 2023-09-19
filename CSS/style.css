@@ -22,7 +22,7 @@
     margin-right: 10px;
 }
 
-.new-task button{
+.new-task button {
     padding: 10px 20px;
     border-radius: 10px;
     border-width: 1px;
@@ -42,7 +42,7 @@
     cursor: pointer;
 }
 
-.task i{
+.task i {
     float: right;
 }
 
